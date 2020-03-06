@@ -33,7 +33,7 @@ export class ConiferousService {
       })
     );
   }
-  // will get all trees from db
+  // returns observable array of trees
   getTrees() {
     return this.trees;
   }
