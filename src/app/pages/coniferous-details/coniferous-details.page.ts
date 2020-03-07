@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Tree, ConiferousService } from 'src/app/services/coniferous.service';
 import { ActivatedRoute } from '@angular/router';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-coniferous-details',
@@ -19,7 +19,8 @@ export class ConiferousDetailsPage implements OnInit {
   treeId = null;
 
 
-  constructor(private coniferousService: ConiferousService, private route: ActivatedRoute, private loadingController: LoadingController) { }
+  constructor(private coniferousService: ConiferousService, private route: ActivatedRoute,
+     private loadingController: LoadingController, private nav: NavController) { }
 
   ngOnInit() {
     this.treeId = this.route.snapshot.params['id'];
@@ -40,7 +41,23 @@ export class ConiferousDetailsPage implements OnInit {
     });
   }
 
-  saveTree() {
+  async saveTree() {
+    const loading = await this.loadingController.create({
+      message: 'Saving Tree..'
+    });
+    await loading.present();
+
+    if (this.treeId) {
+      this.coniferousService.updateTree(this.tree, this.treeId).then(() => {
+        loading.dismiss();
+        this.nav.navigateBack('home');
+      });
+    } else {
+      this.coniferousService.addTree(this.tree).then(() => {
+        loading.dismiss();
+        this.nav.navigateBack('home');
+      });
+    }
 
   }
 
