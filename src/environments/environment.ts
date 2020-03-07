@@ -4,6 +4,16 @@
 
 export const environment = {
   production: false,
+  firebase: {
+    apiKey: "AIzaSyAi6YvYiRYLFBS13wniyGr-UbshnFoBdRc",
+  authDomain: "cloudburst-code-challenge.firebaseapp.com",
+  databaseURL: "https://cloudburst-code-challenge.firebaseio.com",
+  projectId: "cloudburst-code-challenge",
+  storageBucket: "cloudburst-code-challenge.appspot.com",
+  messagingSenderId: "29118136254",
+  appId: "1:29118136254:web:77b91e5c7672218f4ec3ef",
+  measurementId: "G-6452JFGXJJ"
+  }
 };
 
 /*
