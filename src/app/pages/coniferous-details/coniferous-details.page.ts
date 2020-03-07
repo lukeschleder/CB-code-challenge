@@ -11,8 +11,8 @@ import { LoadingController, NavController } from '@ionic/angular';
 export class ConiferousDetailsPage implements OnInit {
 
   tree: Tree = {
-    name: 'White Pine',
-    description: 'Monarch of the North',
+    name: '',
+    description: '',
     imageUrl: ''
   }
 

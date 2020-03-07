@@ -20,7 +20,7 @@
     </ng-container>
 
     <ion-item-sliding *ngFor="let tree of trees">
-      <ion-item lines="inset" button [routerLink]="['/details', 'tree.id']">
+      <ion-item lines="inset" button [routerLink]="['/details', tree.id]">
         <ion-label>
           {{ tree.name }}
           <p>{{ tree.description }}</p>
