@@ -12,12 +12,31 @@
     <ion-row>
       <ion-col size-md="6" offset-md="3">
         <ion-card>
+          <img src={{tree.imageUrl}}/>
           <ion-card-header>
-            {{tree.name}}
+            <ion-card-title color="primary">
+            {{tree.name}}({{tree.scientificName}})
+            </ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>{{tree.description}}</p>
-            <img src={{tree.imageUrl}}/>
+            <ion-card-subtitle size="lrg"color="secondary"><b>Form</b></ion-card-subtitle>
+            <p>{{tree.form}}</p>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-card-subtitle size="lrg"color="tertiary"><b>Bark</b></ion-card-subtitle>
+            <p>{{tree.bark}}</p>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-card-subtitle size="lrg"color="success"><b>Leaf</b></ion-card-subtitle>
+            <p>{{tree.leaf}}</p>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-card-subtitle size="lrg"color="warning"><b>Seeds</b></ion-card-subtitle>
+            <p>{{tree.seeds}}</p>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-card-subtitle size="lrg"color="danger"><b>Range</b></ion-card-subtitle>
+            <p>{{tree.range}}</p>
           </ion-card-content>
         </ion-card>
       </ion-col>
