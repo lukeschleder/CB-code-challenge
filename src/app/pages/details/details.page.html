@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ionTitle">Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card>
+          <ion-card-header>
+            {{tree.name}}
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{tree.description}}</p>
+            <img src={{tree.imageUrl}}/>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+  
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button button [routerLink]="['/edit-details', treeId]" color="warning" routerLink="/edit-details" routerDirection="forward">
+      Edit
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

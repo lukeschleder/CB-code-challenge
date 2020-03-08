@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ionTitle">Edit-Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-list lines="full">
+          <ion-item>
+            <ion-input required type="text" placeholder="Name" [(ngModel)]="tree.name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input required type="text" placeholder="Description" [(ngModel)]="tree.description"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input required type="text" placeholder="ImageUrl" [(ngModel)]="tree.imageUrl"></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-button expand="full" (click)="saveTree()">Save</ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

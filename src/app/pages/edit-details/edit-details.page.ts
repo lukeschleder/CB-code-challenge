@@ -4,11 +4,11 @@ import { ActivatedRoute } from '@angular/router';
 import { LoadingController, NavController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-coniferous-details',
-  templateUrl: './coniferous-details.page.html',
-  styleUrls: ['./coniferous-details.page.scss'],
+  selector: 'app-edit-details',
+  templateUrl: './edit-details.page.html',
+  styleUrls: ['./edit-details.page.scss'],
 })
-export class ConiferousDetailsPage implements OnInit {
+export class EditDetailsPage implements OnInit {
 
   tree: Tree = {
     name: '',
@@ -23,6 +23,7 @@ export class ConiferousDetailsPage implements OnInit {
      private loadingController: LoadingController, private nav: NavController) { }
 
   ngOnInit() {
+    console.log(this.route.snapshot.params['id']);
     this.treeId = this.route.snapshot.params['id'];
     if (this.treeId) {
       this.loadTree();
