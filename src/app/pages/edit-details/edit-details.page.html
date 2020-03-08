@@ -16,10 +16,25 @@
             <ion-input required type="text" placeholder="Name" [(ngModel)]="tree.name"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="Description" [(ngModel)]="tree.description"></ion-input>
+            <ion-input required type="text" placeholder="Scientific Name" [(ngModel)]="tree.scientificName"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="ImageUrl" [(ngModel)]="tree.imageUrl"></ion-input>
+            <ion-input required type="text" placeholder="Form" [(ngModel)]="tree.form"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input required type="text" placeholder="Bark" [(ngModel)]="tree.bark"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input required type="text" placeholder="Leaf" [(ngModel)]="tree.leaf"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input required type="text" placeholder="Seeds" [(ngModel)]="tree.seeds"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input required type="text" placeholder="Range" [(ngModel)]="tree.range"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input required type="text" placeholder="Image URL" [(ngModel)]="tree.imageUrl"></ion-input>
           </ion-item>
         </ion-list>
         <ion-button expand="full" (click)="saveTree()">Save</ion-button>

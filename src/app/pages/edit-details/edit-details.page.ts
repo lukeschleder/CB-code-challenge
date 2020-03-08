@@ -12,7 +12,12 @@ export class EditDetailsPage implements OnInit {
 
   tree: Tree = {
     name: '',
-    description: '',
+    scientificName: '',
+    form: '',
+    bark: '',
+    leaf: '',
+    seeds: '',
+    range: '',
     imageUrl: ''
   }
 
@@ -23,7 +28,6 @@ export class EditDetailsPage implements OnInit {
      private loadingController: LoadingController, private nav: NavController) { }
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['id']);
     this.treeId = this.route.snapshot.params['id'];
     if (this.treeId) {
       this.loadTree();

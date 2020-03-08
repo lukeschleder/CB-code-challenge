@@ -5,9 +5,13 @@ import { map } from 'rxjs/operators';
 
 export interface Tree {
   name: string;
-  description: string;
+  scientificName: string;
+  form: string;
+  bark: string;
+  leaf: string;
+  seeds: string;
+  range: string;
   imageUrl: string;
-
 }
 
 @Injectable({

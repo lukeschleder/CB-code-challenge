@@ -23,13 +23,9 @@ export class DetailsPage implements OnInit {
      private loadingController: LoadingController, private nav: NavController) { }
 
   ngOnInit() {
-    console.log(this.route.snapshot.params['id']);
-    
     this.treeId = this.route.snapshot.params['id'];
     if (this.treeId) {
       this.loadTree();
-      console.log(this.treeId);
-      
     }
   }
 
@@ -42,7 +38,6 @@ export class DetailsPage implements OnInit {
     this.coniferousService.getTree(this.treeId).subscribe(res => {
       loading.dismiss();
       this.tree = res;
-      console.log(this.tree);
     });
   }
 
