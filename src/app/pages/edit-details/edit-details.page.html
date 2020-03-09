@@ -14,31 +14,44 @@
       <ion-col size-md="6" offset-md="3">
         <ion-list lines="full">
           <ion-item>
-          <ion-label color="danger">Name:</ion-label>
+          <ion-label color="medium">Conifer Name:</ion-label>
             <ion-input required type="text" [(ngModel)]="tree.name"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label color="tertiary">Scientific Name:</ion-label> 
+            <ion-label color="primary">Scientific Name:</ion-label> 
             <ion-input required type="text" [(ngModel)]="tree.scientificName"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label color="tertiary">Form:</ion-label>
-            <ion-input color="dark" required type="text" [(ngModel)]="tree.form"></ion-input>
+            <ion-label color="secondary">Form:</ion-label>
+            <ion-textarea auto-grow color="dark" required type="text" [(ngModel)]="tree.form"></ion-textarea>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="Bark" [(ngModel)]="tree.bark"></ion-input>
+            <ion-label color="tertiary">Bark:</ion-label>
+            <ion-textarea auto-grow required type="text" [(ngModel)]="tree.bark"></ion-textarea>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="Leaf" [(ngModel)]="tree.leaf"></ion-input>
+            <ion-label color="success">Leaf:</ion-label>
+            <ion-textarea auto-grow required type="text" [(ngModel)]="tree.leaf"></ion-textarea>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="Seeds" [(ngModel)]="tree.seeds"></ion-input>
+            <ion-label color="warning">Seeds:</ion-label>
+            <ion-textarea auto-grow required type="text" [(ngModel)]="tree.seeds"></ion-textarea>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="Range" [(ngModel)]="tree.range"></ion-input>
+            <ion-label color="danger">Range:</ion-label>
+            <ion-textarea auto-grow required type="text" [(ngModel)]="tree.range"></ion-textarea>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="Image URL" [(ngModel)]="tree.imageUrl"></ion-input>
+            <ion-label color="medium">Image URL:</ion-label>
+            <ion-textarea auto-grow required type="text" [(ngModel)]="tree.imageUrl"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label color="primary">Field Observations:</ion-label>
+            <ion-textarea auto-grow required type="text" [(ngModel)]="tree.fieldObservations"></ion-textarea>
+          </ion-item>
+          <ion-item>
+            <ion-label color="secondary">Field Photos:</ion-label>
+            <ion-button color="secondary"expand="full">Add Picture</ion-button>
           </ion-item>
         </ion-list>
         <ion-button expand="full" (click)="saveTree()">Save</ion-button>

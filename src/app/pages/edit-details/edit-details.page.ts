@@ -18,7 +18,8 @@ export class EditDetailsPage implements OnInit {
     leaf: '',
     seeds: '',
     range: '',
-    imageUrl: ''
+    imageUrl: '',
+    fieldObservations: ''
   }
   // empty value to hold the params/ treeId of tree clicked
   treeId = null;

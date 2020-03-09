@@ -13,7 +13,7 @@
     <ion-row>
       <ion-col size-md="6" offset-md="3">
         <ion-card>
-          <img alt="picture of differing coniferous species"src={{tree.imageUrl}}/>
+          <ion-img alt="picture of differing coniferous species from MN"src={{tree.imageUrl}}></ion-img>
           <ion-card-header>
             <ion-card-title color="primary">
             {{tree.name}}({{tree.scientificName}})
@@ -38,6 +38,13 @@
           <ion-card-content>
             <ion-card-subtitle size="lrg"color="danger"><b>Range</b></ion-card-subtitle>
             <p>{{tree.range}}</p>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-card-subtitle size="lrg"color="primary"><b>Field Observations</b></ion-card-subtitle>
+            <p>{{tree.fieldObservations}}</p>
+          </ion-card-content>
+          <ion-card-content>
+            <ion-card-subtitle size="lrg"color="secondary"><b>Field Photos</b></ion-card-subtitle>
           </ion-card-content>
         </ion-card>
       </ion-col>

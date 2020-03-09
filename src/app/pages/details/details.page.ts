@@ -18,7 +18,8 @@ export class DetailsPage implements OnInit {
     leaf: '',
     seeds: '',
     range: '',
-    imageUrl: ''
+    imageUrl: '',
+    fieldObservations: ''
   }
   // creates null vaiable that will be used to capture id params
   treeId = null;

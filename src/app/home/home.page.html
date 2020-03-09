@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title size="lrg"class="ionTitle">
-      <b>Common Conifer MN</b>
+      <b>Conifer Cache MN</b>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -25,7 +25,8 @@
             <ion-item lines="inset" button [routerLink]="['/details', tree.id]">
               <ion-label padding color="primary">
                 <b>{{ tree.name }}</b>
-                <ion-img src="{{tree.imageUrl}}"></ion-img>
+                <p id="scienceStyle">{{tree.scientificName}}</p>
+                <ion-img alt="picture list of conifer trees from MN"src="{{tree.imageUrl}}"></ion-img>
               </ion-label>
             </ion-item>
       

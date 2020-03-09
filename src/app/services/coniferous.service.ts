@@ -13,6 +13,7 @@ export interface Tree {
   seeds: string;
   range: string;
   imageUrl: string;
+  fieldObservations: string;
 }
 
 @Injectable({
