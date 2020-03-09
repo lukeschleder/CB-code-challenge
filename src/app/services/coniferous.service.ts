@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+// typescipt that adds interface to firebase files
 export interface Tree {
   name: string;
   scientificName: string;
@@ -18,11 +19,11 @@ export interface Tree {
   providedIn: 'root'
 })
 export class ConiferousService {
-
+  // reference to angularfirestore collection that holds elments of the type Tree
   private treesCollection: AngularFirestoreCollection<Tree>;
-
+  // observable with array of tree elements
   private trees: Observable<Tree[]>;
-
+  // reference to database
   constructor( db: AngularFirestore) {
     this.treesCollection = db.collection<Tree>('trees');
 
@@ -45,7 +46,7 @@ export class ConiferousService {
   getTree(id) {
     return this.treesCollection.doc<Tree>(id).valueChanges();
   }
-  // will update tree name description or imageUrl identified by id
+  // will update Tree identified by id
   updateTree(tree: Tree, id: string) {
     return this.treesCollection.doc(id).update(tree);
   }

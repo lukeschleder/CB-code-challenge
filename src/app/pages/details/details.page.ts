@@ -9,26 +9,31 @@ import { LoadingController, NavController } from '@ionic/angular';
   styleUrls: ['./details.page.scss'],
 })
 export class DetailsPage implements OnInit {
-
+  // creates empty shell to fill with data returned from getTree service
   tree: Tree = {
     name: '',
-    description: '',
+    scientificName: '',
+    form: '',
+    bark: '',
+    leaf: '',
+    seeds: '',
+    range: '',
     imageUrl: ''
   }
-
+  // creates null vaiable that will be used to capture id params
   treeId = null;
 
 
   constructor(private coniferousService: ConiferousService, private route: ActivatedRoute,
      private loadingController: LoadingController, private nav: NavController) { }
-
+  // grabs a snapshot of params which are the id of tree clicked on home page and creates treeId on details page
   ngOnInit() {
     this.treeId = this.route.snapshot.params['id'];
     if (this.treeId) {
       this.loadTree();
     }
   }
-
+  // shows loading message if needed and then calls getTree with treeId to retreive info for just one tree
   async loadTree() {
     const loading = await this.loadingController.create({
       message: 'Loading Trees..'

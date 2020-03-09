@@ -8,18 +8,22 @@
 </ion-header>
 
 <ion-content padding>
+  <!-- using grid to control location of card on smaller and larger screens -->
   <ion-grid>
     <ion-row>
       <ion-col size-md="6" offset-md="3">
         <ion-list lines="full">
           <ion-item>
-            <ion-input required type="text" placeholder="Name" [(ngModel)]="tree.name"></ion-input>
+          <ion-label color="danger">Name:</ion-label>
+            <ion-input required type="text" [(ngModel)]="tree.name"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="Scientific Name" [(ngModel)]="tree.scientificName"></ion-input>
+            <ion-label color="tertiary">Scientific Name:</ion-label> 
+            <ion-input required type="text" [(ngModel)]="tree.scientificName"></ion-input>
           </ion-item>
           <ion-item>
-            <ion-input required type="text" placeholder="Form" [(ngModel)]="tree.form"></ion-input>
+            <ion-label color="tertiary">Form:</ion-label>
+            <ion-input color="dark" required type="text" [(ngModel)]="tree.form"></ion-input>
           </ion-item>
           <ion-item>
             <ion-input required type="text" placeholder="Bark" [(ngModel)]="tree.bark"></ion-input>

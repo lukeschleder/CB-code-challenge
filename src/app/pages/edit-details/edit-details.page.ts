@@ -9,7 +9,7 @@ import { LoadingController, NavController } from '@ionic/angular';
   styleUrls: ['./edit-details.page.scss'],
 })
 export class EditDetailsPage implements OnInit {
-
+  // empty shell to hold information returned by getTree service
   tree: Tree = {
     name: '',
     scientificName: '',
@@ -20,20 +20,20 @@ export class EditDetailsPage implements OnInit {
     range: '',
     imageUrl: ''
   }
-
+  // empty value to hold the params/ treeId of tree clicked
   treeId = null;
 
 
   constructor(private coniferousService: ConiferousService, private route: ActivatedRoute,
      private loadingController: LoadingController, private nav: NavController) { }
-
+  // grabs params and sets to treeId and then calls loadTree function
   ngOnInit() {
     this.treeId = this.route.snapshot.params['id'];
     if (this.treeId) {
       this.loadTree();
     }
   }
-
+  // loading message if needed and then runs getTree function to return tree object with treeId
   async loadTree() {
     const loading = await this.loadingController.create({
       message: 'Loading Trees..'
@@ -45,7 +45,7 @@ export class EditDetailsPage implements OnInit {
       this.tree = res;
     });
   }
-
+  // loading message if needed and then updates tree object if exists or creates new object if it does not
   async saveTree() {
     const loading = await this.loadingController.create({
       message: 'Saving Tree..'

@@ -1,8 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="success">
+  <ion-toolbar color="primary">
     <ion-title size="lrg"class="ionTitle">
-      <ion-icon name="finger-print-outline"></ion-icon>
-      <b>Conifer Gallery MN</b>
+      <b>Common Conifer MN</b>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -21,10 +20,10 @@
               </p>
             </div>
           </ng-container>
-           
+          <!-- looping through tree collection and displaying on home page as list -->
           <ion-item-sliding *ngFor="let tree of trees">
             <ion-item lines="inset" button [routerLink]="['/details', tree.id]">
-              <ion-label color="tertiary">
+              <ion-label padding color="primary">
                 <b>{{ tree.name }}</b>
                 <ion-img src="{{tree.imageUrl}}"></ion-img>
               </ion-label>
@@ -44,10 +43,10 @@
   </ion-grid>
 
 
-
+  <!-- floating button that allows user to add new coniferous tree to list -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button color="success" routerLink="/edit-details" routerDirection="forward">
-      <ion-icon class="ionIcon"name="add"></ion-icon>
+      <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
