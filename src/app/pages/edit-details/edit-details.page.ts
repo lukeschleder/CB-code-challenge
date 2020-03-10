@@ -24,7 +24,6 @@ export class EditDetailsPage implements OnInit {
   // empty value to hold the params/ treeId of tree clicked
   treeId = null;
 
-
   constructor(private coniferousService: ConiferousService, private route: ActivatedRoute,
      private loadingController: LoadingController, private nav: NavController) { }
   // grabs params and sets to treeId and then calls loadTree function
