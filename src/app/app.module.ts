@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 // imported to allow access to angularfire2
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 // points to configuration file in environment
 import { environment } from '../environments/environment';
 // imported to allow access to firebase and cloud firestore
@@ -21,6 +22,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebase), 
+  AngularFireAuthModule,
   AngularFirestoreModule],
   providers: [
     StatusBar,
