@@ -51,7 +51,10 @@
           </ion-item>
           <ion-item>
             <ion-label color="secondary">Field Photos:</ion-label>
-            <ion-button color="secondary"expand="full">Add Picture</ion-button>
+
+            <img [src]="photo" >
+
+            <ion-button (click)="takePicture()" color="secondary"expand="full">Take Picture</ion-button>
           </ion-item>
         </ion-list>
         <ion-button expand="full" (click)="saveTree()">Save</ion-button>

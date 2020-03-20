@@ -24,6 +24,7 @@ export class ConiferousService {
   private treesCollection: AngularFirestoreCollection<Tree>;
   // observable with array of tree elements
   private trees: Observable<Tree[]>;
+  
   // reference to database
   constructor( db: AngularFirestore) {
     this.treesCollection = db.collection<Tree>('trees');

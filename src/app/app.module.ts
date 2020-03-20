@@ -15,6 +15,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 // imported to allow access to firebase and cloud firestore
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 
 // added angularfirestoremodule and angularfiremodule to allow to access to firebase
 @NgModule({
@@ -23,6 +24,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   AngularFireModule.initializeApp(environment.firebase), 
   AngularFireAuthModule,
+  AngularFireStorageModule,
   AngularFirestoreModule],
   providers: [
     StatusBar,
