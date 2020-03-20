@@ -27,6 +27,22 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'home-deciduous',
+    loadChildren: () => import('./home-deciduous/home-deciduous.module').then( m => m.HomeDeciduousPageModule)
+  },
+  {
+    path: 'deciduous-edit',
+    loadChildren: () => import('./pages/deciduous-edit/deciduous-edit.module').then( m => m.DeciduousEditPageModule)
+  },
+  {
+    path: 'deciduous-edit/:id',
+    loadChildren: () => import('./pages/deciduous-edit/deciduous-edit.module').then( m => m.DeciduousEditPageModule)
+  },
+  {
+    path: 'deciduous-details/:id',
+    loadChildren: () => import('./pages/deciduous-details/deciduous-details.module').then( m => m.DeciduousDetailsPageModule)
+  },
 ];
 
 @NgModule({

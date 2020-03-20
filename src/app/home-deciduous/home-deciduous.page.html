@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title size="lrg"class="ionTitle">
-      <b>Conifer Cache MN</b>
+      <b>Deciduous Cache MN</b>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,6 +11,7 @@
     <ion-row>
       <ion-col size-md="6" offset-md="3">
         <ion-list>
+
           <ng-container *ngIf="!trees || trees.length ==0">
             <div *ngFor="let n of [0,1,2]" padding>
               <ion-skeleton-text></ion-skeleton-text>
@@ -21,14 +22,14 @@
           </ng-container>
           <!-- looping through tree collection and displaying on home page as list -->
           <ion-item-sliding *ngFor="let tree of trees">
-            <ion-item lines="inset" button [routerLink]="['/details', tree.id]">
+            <ion-item lines="inset" button [routerLink]="['/deciduous-details', tree.id]">
               <ion-label padding color="primary">
                 <b>{{ tree.name }}</b>
                 <p id="scienceStyle">{{tree.scientificName}}</p>
                 <ion-img alt="picture list of conifer trees from MN"src="{{tree.imageUrl}}"></ion-img>
               </ion-label>
             </ion-item>
-            <!-- allows deleting of trees by sliding to the right -->
+      
             <ion-item-options side="end">
               <ion-item-option (click)="remove(tree)" color="danger">
                 Delete Tree
@@ -41,21 +42,23 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <!-- floating button to allow user to logout -->
+
   <ion-fab vertical="bottom" horizontal="start" slot="fixed">
     <ion-fab-button (click)="logout()" color="danger" routerDirection="forward">
       Logout
     </ion-fab-button>
   </ion-fab>
+
+
   <!-- floating button that allows user to add new coniferous tree to list -->
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="success" routerLink="/edit-details" routerDirection="forward">
+    <ion-fab-button color="success" routerLink="/deciduous-edit-details" routerDirection="forward">
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-  <!-- button to link to deciduous list -->
+
   <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button color="secondary" routerLink="/home-deciduous" routerDirection="forward">
+    <ion-fab-button color="secondary" routerLink="/home" routerDirection="forward">
       <ion-icon name="link"></ion-icon>
     </ion-fab-button>
   </ion-fab>
